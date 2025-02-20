@@ -60,10 +60,57 @@
     <Analyzer Include="D:\Program Files (x86)\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Bomb.cs" />
+    <Compile Include="Assets\Scripts\SpawnPositionType\ISpawnPosition.cs" />
+    <Compile Include="Assets\Scripts\Explosion.cs" />
+    <Compile Include="Assets\Scripts\SpawnerType\PointSpawnerBombs.cs" />
+    <Compile Include="Assets\Scripts\SpawnerType\CyclingSpawner.cs" />
+    <Compile Include="Assets\Scripts\BombView.cs" />
+    <Compile Include="Assets\Scripts\SpawnPositionType\PointPosition.cs" />
+    <Compile Include="Assets\Scripts\ISpawnObject.cs" />
     <Compile Include="Assets\Scripts\Ground.cs" />
-    <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\ObjectPoolFigure.cs" />
-    <Compile Include="Assets\Scripts\SpawnerObject.cs" />
+    <Compile Include="Assets\Scripts\ObjectPools\CubePool.cs" />
+    <Compile Include="Assets\Scripts\ObjectPools\BombsPool.cs" />
+    <Compile Include="Assets\Scripts\CubeDestroyer.cs" />
+    <Compile Include="Assets\Scripts\SpawnPositionType\RandomPositionInBounds.cs" />
+    <Compile Include="Assets\Scripts\SpawnerType\PointSpawner.cs" />
+    <Compile Include="Assets\Scripts\Spawner\SpawnerCubes.cs" />
+    <Compile Include="Assets\Scripts\Spawner\MultiSpawnerCubesBombs.cs" />
+    <Compile Include="Assets\Scripts\CubeView.cs" />
+    <Compile Include="Assets\Scripts\UI\SpawnerInformationCubes.cs" />
+    <Compile Include="Assets\Scripts\Spawner\MultiSpawner.cs" />
+    <Compile Include="Assets\Scripts\UI\SpawnerInformationBombs.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\Spawner\SpawnerBombs.cs" />
+    <Compile Include="Assets\Scripts\SpawnerType\ISpawnerType.cs" />
+    <Compile Include="Assets\Scripts\UI\SpawnInformation.cs" />
+    <Compile Include="Assets\Scripts\Cube.cs" />
+    <Compile Include="Assets\Scripts\SpawnerType\CyclingSpawnerCubes.cs" />
+    <Compile Include="Assets\Scripts\ObjectPools\ObjectPoolFigure.cs" />
+    <Compile Include="Assets\Scripts\Spawner\Spawner.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
