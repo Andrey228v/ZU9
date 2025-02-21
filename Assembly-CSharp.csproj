@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\SpawnPositionType\RandomPositionInBounds.cs" />
     <Compile Include="Assets\Scripts\SpawnerType\PointSpawner.cs" />
     <Compile Include="Assets\Scripts\Spawner\SpawnerCubes.cs" />
+    <Compile Include="Assets\Scripts\GroundDetecter.cs" />
     <Compile Include="Assets\Scripts\Spawner\MultiSpawnerCubesBombs.cs" />
     <Compile Include="Assets\Scripts\CubeView.cs" />
     <Compile Include="Assets\Scripts\UI\SpawnerInformationCubes.cs" />

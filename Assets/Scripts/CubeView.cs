@@ -1,45 +1,45 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts
 {
-    [RequireComponent(typeof(Renderer))]
+    [RequireComponent(typeof(Renderer), typeof(Cube))]
     public class CubeView : MonoBehaviour
     {
-        [SerializeField] private Material[] _material;
+        [SerializeField] private Material[] _materials;
 
         private Renderer _renderer;
-        private bool _isCollisionWithGround = false;
+        private Cube _cube;
 
         private int _startMaterial = 0;
         private int _collisionMaterial = 1;
 
-        public event Action CollisedWithGround;
-
         private void Awake()
         {
             _renderer = GetComponent<Renderer>();
-            _renderer.material = _material[_startMaterial];
+            _cube = GetComponent<Cube>();
+            _renderer.material = _materials[_startMaterial];
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnEnable()
         {
-            if (_isCollisionWithGround == false)
-            {
-                if (collision.transform.TryGetComponent(out Ground ground))
-                {
-                    _renderer.material = _material[_collisionMaterial];
-                    _isCollisionWithGround = true;
+            _cube.GroundDetecter.CollisedWithGround += SetCollisionParametrs;
+            _cube.CubeDestroyer.Destroed += SetDefaultParametrs;
+        }
 
-                    CollisedWithGround?.Invoke();
-                }
-            }
+        private void OnDisable()
+        {
+            _cube.GroundDetecter.CollisedWithGround -= SetCollisionParametrs;
+            _cube.CubeDestroyer.Destroed -= SetDefaultParametrs;
+        }
+
+        public void SetCollisionParametrs()
+        {
+            _renderer.material = _materials[_collisionMaterial];
         }
 
         public void SetDefaultParametrs()
         {
-            _isCollisionWithGround = false;
-            _renderer.material = _material[_startMaterial];
+            _renderer.material = _materials[_startMaterial];
         }
     }
 }

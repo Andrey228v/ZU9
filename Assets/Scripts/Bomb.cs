@@ -5,9 +5,8 @@ namespace Assets.Scripts
 {
     public class Bomb : MonoBehaviour, ISpawnObject<Bomb>
     {
-        [SerializeField] private BombView _bombView;
-        [SerializeField] private Explosion _explosion;
-        [SerializeField] private Timer _timer;
+        [field: SerializeField] public Explosion Explosion { get; private set; }
+        [field: SerializeField] public Timer Timer { get; private set; }
 
         private int _minTimeLife = 2;
         private int _maxTimeLife = 5;
@@ -16,26 +15,23 @@ namespace Assets.Scripts
 
         private void OnEnable()
         {
-            _timer.TickingPeriod += _bombView.SetAlphaParametr;
-            _timer.StopingTimer += _explosion.CreateExplosion;
-            _explosion.Exploded += Despawn;
+            Timer.Stoping += Explosion.CreateExplosion;
+            Explosion.Exploded += Despawn;
 
             float timeLife = UnityEngine.Random.Range(_minTimeLife, _maxTimeLife);
-            _timer.SetStopTime(timeLife);
-            _timer.StartTimer();
+            Timer.SetStopTime(timeLife);
+            Timer.StartTimer();
         }
 
         private void OnDisable()
         {
-            _timer.TickingPeriod -= _bombView.SetAlphaParametr;
-            _timer.StopingTimer -= _explosion.CreateExplosion;
-            _explosion.Exploded -= Despawn;
+            Timer.Stoping -= Explosion.CreateExplosion;
+            Explosion.Exploded -= Despawn;
         }
 
         public void Despawn()
         {
-            _bombView.SetDefaultParametrs();
-            _timer.ResetTime();
+            Timer.ResetTime();
             DestroedSpawnObject?.Invoke(this);
         }
     }

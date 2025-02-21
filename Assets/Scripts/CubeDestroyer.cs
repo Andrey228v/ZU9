@@ -14,13 +14,13 @@ namespace Assets.Scripts
 
         private void OnEnable()
         {
-            _timer.StopingTimer += DestroyCube;
+            _timer.Stoping += DestroyCube;
         }
 
         private void OnDisable()
         {
             _timer.ResetTime();
-            _timer.StopingTimer -= DestroyCube;
+            _timer.Stoping -= DestroyCube;
         }
 
         public void StartDestroy()

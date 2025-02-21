@@ -362,6 +362,7 @@
 "Assets/Scripts/CubeView.cs"
 "Assets/Scripts/Explosion.cs"
 "Assets/Scripts/Ground.cs"
+"Assets/Scripts/GroundDetecter.cs"
 "Assets/Scripts/ISpawnObject.cs"
 "Assets/Scripts/ObjectPools/BombsPool.cs"
 "Assets/Scripts/ObjectPools/CubePool.cs"

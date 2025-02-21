@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Users\\Andrey\\Desktop\\\u0420\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0421#\\ZU9\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD5DE99B-0AFA-50FE-D393-82F4F95E8802}|Assembly-CSharp.csproj|d:\\users\\andrey\\desktop\\\u0440\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0441#\\zu9\\assets\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD5DE99B-0AFA-50FE-D393-82F4F95E8802}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,6 +39,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{dcc4ea97-1c0c-482b-b205-e541c0df9728}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Bomb.cs",
+              "DocumentMoniker": "D:\\Users\\Andrey\\Desktop\\\u0420\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0421#\\ZU9\\Assets\\Scripts\\Bomb.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bomb.cs",
+              "ToolTip": "D:\\Users\\Andrey\\Desktop\\\u0420\u0430\u0431\u043E\u0442\u044B \u043F\u043E \u0421#\\ZU9\\Assets\\Scripts\\Bomb.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bomb.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwBwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T19:51:17.847Z",
+              "EditorCaption": ""
             }
           ]
         }

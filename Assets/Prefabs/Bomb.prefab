@@ -122,9 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1494ac81bfdcb4cb5bd699c2da8cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bombView: {fileID: 7035070096972997660}
-  _explosion: {fileID: 3646613468755215363}
-  _timer: {fileID: 2943683970121144133}
+  <Explosion>k__BackingField: {fileID: 3646613468755215363}
+  <Timer>k__BackingField: {fileID: 2943683970121144133}
 --- !u!54 &6545284139263275610
 Rigidbody:
   m_ObjectHideFlags: 0

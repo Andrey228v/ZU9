@@ -11,8 +11,8 @@ namespace Assets.Scripts
         private float _period = 1f;
         private float _relativeTime = 1f;
 
-        public event Action StartingTimer;
-        public event Action StopingTimer;
+        public event Action Starting;
+        public event Action Stoping;
         public event Action<string> ChangingTime;
         public event Action<float> TickingPeriod;
 
@@ -31,7 +31,7 @@ namespace Assets.Scripts
                 }
                 else
                 {
-                    StopingTimer?.Invoke();
+                    Stoping?.Invoke();
                     IsWorking = false;
                 }
 
@@ -46,7 +46,7 @@ namespace Assets.Scripts
 
         public void StartTimer()
         {
-            StartingTimer?.Invoke();
+            Starting?.Invoke();
             IsWorking = true;
         }
 

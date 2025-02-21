@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour, ISpawnObject<Cube>
 {
-    [SerializeField] private CubeView _cubeView;
-    [SerializeField] private CubeDestroyer _cubeDestroyer;
-    
+    [field: SerializeField] public CubeDestroyer CubeDestroyer { get; private set; }
+    [field: SerializeField] public GroundDetecter GroundDetecter { get; private set; }
+
     public event Action<Cube> DestroedSpawnObject;
 
     private void OnEnable()
     {
-        _cubeView.CollisedWithGround += _cubeDestroyer.StartDestroy;
-        _cubeDestroyer.Destroed += _cubeView.SetDefaultParametrs;
-        _cubeDestroyer.Destroed += Despawn;
-
+        GroundDetecter.CollisedWithGround += CubeDestroyer.StartDestroy;
+        CubeDestroyer.Destroed += Despawn;
     }
 
     private void OnDisable()
     {
-        _cubeView.CollisedWithGround -= _cubeDestroyer.StartDestroy;
-        _cubeDestroyer.Destroed -= _cubeView.SetDefaultParametrs;
-        _cubeDestroyer.Destroed -= Despawn;
+        GroundDetecter.CollisedWithGround -= CubeDestroyer.StartDestroy;
+        CubeDestroyer.Destroed -= Despawn;
     }
 
     public void Despawn()

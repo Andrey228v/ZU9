@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1614925378135136215}
   - component: {fileID: 6271636329833325364}
   - component: {fileID: 6721336828150702247}
+  - component: {fileID: 8451701748145628117}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -149,8 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5682567ff048f4094d9c5646ad8255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubeView: {fileID: 1614925378135136215}
-  _cubeDestroyer: {fileID: 6721336828150702247}
+  <CubeDestroyer>k__BackingField: {fileID: 6721336828150702247}
+  <GroundDetecter>k__BackingField: {fileID: 8451701748145628117}
 --- !u!114 &1614925378135136215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9faca81852cd424c9647a479a7aaff4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material:
+  _materials:
   - {fileID: 2100000, guid: 68e9c32d15abdcc468fadb4bcd55a24e, type: 2}
   - {fileID: 2100000, guid: d3975d5caa079ff4e9461c61ebfc6f3d, type: 2}
 --- !u!114 &6271636329833325364
@@ -191,3 +192,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timer: {fileID: 6271636329833325364}
+--- !u!114 &8451701748145628117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3161952218765237085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a4ccf10d602f049a18b185286b6f9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
